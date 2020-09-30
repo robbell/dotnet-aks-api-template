@@ -8,6 +8,8 @@
     <Authors>Rob Bell</Authors>
     <Description>A 'dotnet new' template for creating a fully-featured, 12 Factor, ASP.NET Core Web API for AKS</Description>
     <PackageTags>dotnet-new;templates;web-api;aspnet;aks</PackageTags>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+
     <TargetFramework>netstandard2.0</TargetFramework>
 
     <IncludeContentInPack>true</IncludeContentInPack>
@@ -17,6 +19,7 @@
 
   <ItemGroup>
     <Content Include="template\**\*" Exclude="template\**\bin\**;template\**\obj\**" />
+    <None Include="LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
     <Compile Remove="**\*" />
   </ItemGroup>
 
