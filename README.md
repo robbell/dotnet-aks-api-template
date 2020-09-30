@@ -17,3 +17,4 @@ A `dotnet new` template for creating a fully-featured, 12 Factor, ASP.NET Core W
 * [ ] Other creation parameters (Port? EnablingAuthentication?)
 * [ ] Post actions (run 'dotnet restore'?)
 * [ ] Are launchsettings.json valuable when running in containers?
+* [ ] Template package versioning
