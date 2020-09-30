@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Rob Bell",
+    "classifications": [
+        "WebAPI",
+        "ASP.NET",
+        "AKS"
+    ],
+    "identity": "robbell.aksapi.template",
+    "name": "ASP.NET Core WebAPI for AKS",
+    "shortName": "aksapi",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "src.api",
+    "preferNameDirectory": true
+}
