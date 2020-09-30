@@ -8,11 +8,18 @@
     ],
     "identity": "robbell.aksapi.template",
     "name": "ASP.NET Core WebAPI for AKS",
+    "description": "A 'dotnet new' template for creating a fully-featured, 12 Factor, ASP.NET Core Web API for AKS",
     "shortName": "aksapi",
     "tags": {
         "language": "C#",
         "type": "project"
     },
-    "sourceName": "src.api",
+    "defaultName": "AksApi",
+    "sourceName": "AksApi",
+    "primaryOutputs": [
+        {
+            "path": "AksApi.csproj"
+        }
+    ],
     "preferNameDirectory": true
 }
