@@ -22,3 +22,4 @@ jobs:
         PROJECT_FILE_PATH: AksApiTemplate.csproj
         # API key to authenticate with NuGet server
         NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+        VERSION_REGEX: <PackageVersion>(.*)<\/PackageVersion>
