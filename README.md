@@ -1,6 +1,6 @@
-# ASP.NET Core WebAPI for AKS template
+# ASP.NET Core Web API for AKS template
 
-A `dotnet new` template for creating a fully-featured, 12 Factor, ASP.NET Core WebAPI for AKS.
+A `dotnet new` template for creating a fully-featured, 12 Factor, ASP.NET Core Web API for AKS.
 
 ## To include:
 
