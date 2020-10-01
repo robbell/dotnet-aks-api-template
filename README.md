@@ -20,10 +20,10 @@ dotnet new aksapi -n MyApi
 * [x] Template packaging on all platforms ([.csproj package](https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates#packing-a-template-into-a-nuget-package-nupkg-file))
 * [x] Template package versioning
 * [x] Removal of package warnings
+* [x] Sample endpoint (versioning?)
 
 ## Upcoming:
 
-* [ ] Sample endpoint (versioning?)
 * [ ] Dockerfile (including test running)
 * [ ] Swagger
 * [ ] Health check
