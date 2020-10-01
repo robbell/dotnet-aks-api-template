@@ -10,7 +10,7 @@
     <PackageTags>dotnet-new;templates;web-api;aspnet;aks</PackageTags>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
 
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
