@@ -19,6 +19,7 @@ dotnet new aksapi -n MyApi
 * [x] Installation notes
 * [x] Template packaging on all platforms ([.csproj package](https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates#packing-a-template-into-a-nuget-package-nupkg-file))
 * [x] Template package versioning
+* [x] Removal of package warnings
 
 ## Upcoming:
 
@@ -34,4 +35,3 @@ dotnet new aksapi -n MyApi
 * [ ] Post actions (run 'dotnet restore'?)
 * [ ] Are launchsettings.json valuable when running in containers?
 * [ ] No unused references
-* [ ] Removal of package warnings
