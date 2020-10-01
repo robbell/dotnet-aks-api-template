@@ -21,5 +21,14 @@
             "path": "AksApi.csproj"
         }
     ],
-    "preferNameDirectory": true
+    "preferNameDirectory": true,
+    "symbols": {
+        "controllerName": {
+            "type": "parameter",
+            "datatype": "text",
+            "replaces": "SampleController",
+            "fileRename": "SampleController",
+            "description": "The name of the default controller. Default is SampleController."
+        }
+    }
 }
