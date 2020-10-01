@@ -26,12 +26,12 @@ dotnet new aksapi -n MyApi
 * [ ] Sample endpoint (versioning?)
 * [ ] Dockerfile (including test running)
 * [ ] Swagger
-* [ ] AppInsights
 * [ ] Health check
-* [ ] YAML release pipeline (Azure DevOps or GitHub Actions?)
+* [ ] AppInsights
 * [ ] Helm charts (best way to include these?)
+* [ ] YAML release pipeline (Azure DevOps or GitHub Actions?)
+* [ ] Post actions (run 'dotnet restore'?)
 * [ ] Other [12 Factor](https://12factor.net/) app traits
 * [ ] Other creation parameters (Port? EnablingAuthentication?)
-* [ ] Post actions (run 'dotnet restore'?)
-* [ ] Are launchsettings.json valuable when running in containers?
+* [ ] Reintroduce launchsettings.json if useful
 * [ ] No unused references
