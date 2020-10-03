@@ -31,15 +31,15 @@ dotnet new aksapi -n MyApi --controllerName MyController
 - [x] Sample endpoint (versioning?)
 - [x] Dockerfile
 - [x] No unused references
+- [x] Post actions (run 'dotnet restore'?)
 
 ## Upcoming:
 
 - [ ] Optional Swagger
+- [ ] Helm charts
 - [ ] Health check endpoint
 - [ ] AppInsights configuration
-- [ ] Helm charts
 - [ ] YAML release pipeline (Azure DevOps or GitHub Actions?)
-- [ ] Post actions (run 'dotnet restore'?)
 
 ## To be confirmed:
 

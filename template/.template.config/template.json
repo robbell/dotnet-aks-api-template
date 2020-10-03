@@ -24,6 +24,25 @@
             "replaces": "SampleController",
             "fileRename": "SampleController",
             "description": "The name of the default controller. Default is SampleController."
+        },
+        "skipRestore": {
+            "type": "parameter",
+            "datatype": "bool",
+            "description": "If specified, skips the automatic restore of the project on create.",
+            "defaultValue": "false"
         }
-    }
+    },
+    "postActions": [
+        {
+            "condition": "(!skipRestore)",
+            "description": "Restore packages required by this project.",
+            "manualInstructions": [
+                {
+                    "text": "Run 'dotnet restore'"
+                }
+            ],
+            "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+            "continueOnError": true
+        }
+    ]
 }
