@@ -24,6 +24,7 @@ dotnet new aksapi -n MyApi
 
 ## Upcoming:
 
+* [ ] Tests project
 * [ ] Dockerfile (including test running)
 * [ ] Swagger
 * [ ] Health check
