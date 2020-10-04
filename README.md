@@ -19,7 +19,7 @@ dotnet new aksapi -n MyApi
 To customise the name of the default controller:
 
 ```
-dotnet new aksapi -n MyApi --controllerName MyController
+dotnet new aksapi -n MyApi --controller-name MyController
 ```
 
 ## Includes:

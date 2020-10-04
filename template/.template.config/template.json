@@ -18,23 +18,33 @@
     "sourceName": "AksApi",
     "preferNameDirectory": true,
     "symbols": {
-        "controllerName": {
+        "controller-name": {
             "type": "parameter",
             "datatype": "text",
             "replaces": "SampleController",
             "fileRename": "SampleController",
             "description": "The name of the default controller. Default is SampleController."
         },
-        "skipRestore": {
+        "skip-restore": {
             "type": "parameter",
             "datatype": "bool",
             "description": "If specified, skips the automatic restore of the project on create.",
             "defaultValue": "false"
+        },
+        "disable-open-api": {
+            "type": "parameter",
+            "datatype": "bool",
+            "description": "Disable OpenAPI (Swagger) support.",
+            "defaultValue": "false"
+        },
+        "enableOpenApi": {
+            "type": "computed",
+            "value": "(!disable-open-api)"
         }
     },
     "postActions": [
         {
-            "condition": "(!skipRestore)",
+            "condition": "(!skip-restore)",
             "description": "Restore packages required by this project.",
             "manualInstructions": [
                 {
