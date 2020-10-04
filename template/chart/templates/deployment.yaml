@@ -26,7 +26,7 @@ spec:
               value: {{ .Values.apphost }}
             - name: appenvironment
               value: {{ .Values.environment}}
-//#if (enableHealthCheckValue)
+//#if (enableHealthCheck)
               readinessProbe:
                 httpGet:
                   path: /health/ready

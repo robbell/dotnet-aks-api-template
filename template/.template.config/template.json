@@ -49,8 +49,7 @@
         },
         "enableHealthCheck": {
             "type": "computed",
-            "value": "(!disable-health-check)",
-            "replaces": "enableHealthCheckValue"
+            "value": "(!disable-health-check)"
         }
     },
     "postActions": [

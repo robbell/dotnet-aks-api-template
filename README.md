@@ -19,14 +19,17 @@ dotnet new aksapi -n MyApi
 Other options include:
 
 ```
---controller-name   The name of the default controller
-                    Default: SampleController
+--controller-name       The name of the default controller
+                        Default: SampleController
 
---disable-open-api  Disable OpenAPI (Swagger) support
-                    Default: false
+--disable-open-api      Disable OpenAPI (Swagger) support
+                        Default: false
 
---skip-restore      Skips the restore of the project on create
-                    Default: false
+--disable-health-check  Disable liveness and readiness support
+                        Default: false
+
+--skip-restore          Skips the restore of the project on create
+                        Default: false
 ```
 
 ## Template features
