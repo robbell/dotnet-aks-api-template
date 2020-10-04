@@ -24,7 +24,7 @@ dotnet new aksapi -n MyApi --controller-name MyController
 
 ## Includes:
 
-- [x] Installation notes
+- [x] Installation and usage notes
 - [x] Template packaging on all platforms ([.csproj package](https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates#packing-a-template-into-a-nuget-package-nupkg-file))
 - [x] Template package versioning
 - [x] Removal of package warnings
@@ -32,10 +32,10 @@ dotnet new aksapi -n MyApi --controller-name MyController
 - [x] Dockerfile
 - [x] No unused references
 - [x] Post actions (run 'dotnet restore'?)
+- [x] Optional Swagger
 
 ## Upcoming:
 
-- [ ] Optional Swagger
 - [ ] Helm charts
 - [ ] Health check endpoint
 - [ ] AppInsights configuration
