@@ -36,9 +36,9 @@ namespace AksApi
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-#if (enable-open-api)
+#if (enableOpenApi)
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Company.WebApplication1 v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AksApi v1"));
 #endif
             }
 
