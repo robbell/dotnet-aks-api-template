@@ -1,10 +1,19 @@
 using Microsoft.AspNetCore.Builder;
+#if (enableHealthCheck)
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+#endif
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+#if (enableHealthCheck)
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+#endif
 using Microsoft.Extensions.Hosting;
 #if (enableOpenApi)
 using Microsoft.OpenApi.Models;
+#endif
+#if (enableHealthCheck)
+using AksApi.HealthChecks;
 #endif
 
 namespace AksApi
@@ -23,10 +32,23 @@ namespace AksApi
         {
             services.AddControllers();
 #if (enableOpenApi)
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AksApi", Version = "v1" });
             });
+#endif
+#if (enableHealthCheck)
+
+            services.AddHealthChecks()
+                .AddCheck<LiveHealthCheck>(
+                    "live-health-check",
+                    failureStatus: HealthStatus.Degraded,
+                    tags: new[] { "live" })
+                .AddCheck<ReadyHealthCheck>(
+                    "ready-health-check",
+                    failureStatus: HealthStatus.Degraded,
+                    tags: new[] { "ready" });
 #endif
         }
 
@@ -51,6 +73,18 @@ namespace AksApi
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+#if (enableHealthCheck)
+
+                endpoints.MapHealthChecks("/health/ready", new HealthCheckOptions()
+                {
+                    Predicate = (check) => check.Tags.Contains("ready")
+                });
+
+                endpoints.MapHealthChecks("/health/live", new HealthCheckOptions()
+                {
+                    Predicate = (check) => check.Tags.Contains("live")
+                });
+#endif
             });
         }
     }

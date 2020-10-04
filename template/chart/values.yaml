@@ -11,6 +11,8 @@ container:
   image: aspnet3k8s # How do we link the two?
   tag: v1 # 
   port: 80
+  probeDelay: 30
+
 replicas: 3
 
 service:

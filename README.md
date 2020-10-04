@@ -35,15 +35,14 @@ Other options include:
 - [x] Docker containerisation
 - [x] OpenAPI support (Swagger)
 - [x] Automatic post creation actions - `dotnet restore`
+- [x] Health check endpoint, including liveness and readiness probes
+- [x] No unused package references or usings
 - [ ] Helm charts
     - [x] Deployment and service creation
     - [ ] Image references
     - [ ] Labels
-- [x] No unused package references or usings
 
 ### In progress
-
-- [ ] Health check endpoint
 - [ ] AppInsights configuration
 - [ ] YAML release pipeline (Azure DevOps or GitHub Actions?)
 - [ ] Clean-up rules

@@ -40,6 +40,17 @@
         "enableOpenApi": {
             "type": "computed",
             "value": "(!disable-open-api)"
+        },
+        "disable-health-check": {
+            "type": "parameter",
+            "datatype": "bool",
+            "description": "Disable health check support.",
+            "defaultValue": "false"
+        },
+        "enableHealthCheck": {
+            "type": "computed",
+            "value": "(!disable-health-check)",
+            "replaces": "enableHealthCheckValue"
         }
     },
     "postActions": [
@@ -53,6 +64,18 @@
             ],
             "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
             "continueOnError": true
+        }
+    ],
+    "sources": [
+        {
+            "modifiers": [
+                {
+                    "condition": "(disable-health-check)",
+                    "exclude": [
+                        "HealthChecks/**"
+                    ]
+                }
+            ]
         }
     ]
 }
