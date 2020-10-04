@@ -56,6 +56,7 @@ Other options include:
 - [ ] Other creation parameters (Port? EnablingAuthentication? FrameworkVersion?)
 - [ ] Reintroduce launchsettings.json if useful
 - [ ] Are there any references that can be pulled at creation time? Helm charts for example
+- [ ] README, LICENSE and CONTRIBUTING files - should `dotnet new` creation map 1:1 with a repository? 
 
 ## The template creation project
 
