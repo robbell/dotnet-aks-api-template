@@ -26,7 +26,7 @@ spec:
               value: {{ .Values.apphost }}
             - name: appenvironment
               value: {{ .Values.environment}}
-//#if (enableHealthCheck)
+              //#if (enableHealthCheckValue)
               readinessProbe:
                 httpGet:
                   path: /health/ready
@@ -37,4 +37,4 @@ spec:
                   path: /health/live
                   port: {{ .Values.container.port }}
                 initialDelaySeconds: {{ .Values.container.probeDelay }}
-//#endif
+            //#endif
