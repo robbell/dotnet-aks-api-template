@@ -1,3 +1,5 @@
+using AksApi.Options;
+using Microsoft.ApplicationInsights.AspNetCore.Extensions;
 using Microsoft.AspNetCore.Builder;
 #if (enableHealthCheck)
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
@@ -30,6 +32,18 @@ namespace AksApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+#if (enableSerolog)
+         var applicationInsightsOptions = new ApplicationInsightsOptions();
+         Configuration.GetSection("ApplicationInsights").Bind(applicationInsightsOptions);
+         var applicationInsightsServiceOptions = new ApplicationInsightsServiceOptions
+         {
+            EnableAdaptiveSampling = applicationInsightsOptions.EnableAdaptiveSampling,
+            InstrumentationKey     = applicationInsightsOptions.InstrumentationKey
+         };
+
+         services.AddApplicationInsightsTelemetry(applicationInsightsServiceOptions);
+#endif
+
             services.AddControllers();
 #if (enableOpenApi)
 

@@ -51,7 +51,18 @@
             "type": "computed",
             "value": "(!disable-health-check)",
             "replaces": "enableHealthCheckValue"
-        }
+        },
+        "disable-serilogging":{
+            "type": "parameter",
+            "datatype": "bool",
+            "description": "Disable Serilogging and AppInsights support.",
+            "defaultValue": "false"
+        },
+        "enableSerilog": {
+            "type": "computed",
+            "value": "(!disable-serilogging)",
+            "replaces": "enableSerilogValue"
+        }        
     },
     "postActions": [
         {
