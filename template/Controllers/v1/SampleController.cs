@@ -18,7 +18,6 @@ namespace AksApi.Controllers.v1
         [HttpGet]
         public string Get()
         {
-            logger.LogInformation("Hello World");
             return "Hello, World!";
         }
     }
