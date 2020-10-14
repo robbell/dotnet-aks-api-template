@@ -85,7 +85,13 @@
                     "exclude": [
                         "HealthChecks/**"
                     ]
-                }
+                },
+                {
+                    "condition": "(disable-logging)",
+                    "exclude": [
+                        "appsettings.json"
+                    ]
+                }                
             ]
         }
     ]

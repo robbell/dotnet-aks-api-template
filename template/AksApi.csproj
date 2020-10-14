@@ -10,4 +10,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
   <!--#endif -->
+  <!--#if (enableLogging) -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.15.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.9" />
+  </ItemGroup>
+  <!--#endif -->
 </Project>
