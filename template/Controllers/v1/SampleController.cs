@@ -18,6 +18,12 @@ namespace AksApi.Controllers.v1
         [HttpGet]
         public string Get()
         {
+#if (enableLogging)
+            logger.LogInformation("Information World");
+            logger.LogWarning("Warning World");
+            logger.LogCritical("Critical World");
+            logger.LogError("Error World");
+#endif
             return "Hello, World!";
         }
     }

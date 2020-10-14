@@ -51,7 +51,18 @@
             "type": "computed",
             "value": "(!disable-health-check)",
             "replaces": "enableHealthCheckValue"
-        }
+        },
+        "disable-logging":{
+            "type": "parameter",
+            "datatype": "bool",
+            "description": "Disable Logging and AppInsights support.",
+            "defaultValue": "false"
+        },
+        "enableLogging": {
+            "type": "computed",
+            "value": "(!disable-logging)",
+            "replaces": "enableLoggingValue"
+        }   
     },
     "postActions": [
         {
