@@ -30,6 +30,10 @@ namespace AksApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+#if (enableLogging)
+            services.AddApplicationInsightsTelemetry();
+#endif
+
             services.AddControllers();
 #if (enableOpenApi)
 
