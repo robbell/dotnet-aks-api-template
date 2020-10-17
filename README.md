@@ -52,6 +52,8 @@ Other options include:
     - [ ] Image references
     - [ ] Labels
 - [x] AppInsights configuration
+- [x] Reintroduce launchsettings.json as per https://github.com/dotnet/aspnetcore/tree/master/src/ProjectTemplates
+- [x] README in created project, including file overview
 
 ### In progress
 - [ ] YAML release pipeline (Azure DevOps or GitHub Actions?)
@@ -63,9 +65,8 @@ Other options include:
 - [ ] Tests project (includes running in Dockerfile) - are these valuable? Forces this to become a multi-project, and possibly solution-creating template
 - [ ] Other [12 Factor](https://12factor.net/) app traits - look at what would be useful to include
 - [ ] Other creation parameters (Port? EnablingAuthentication? FrameworkVersion?)
-- [ ] Reintroduce launchsettings.json if useful
 - [ ] Are there any references that can be pulled at creation time? Helm charts for example
-- [ ] README, LICENSE and CONTRIBUTING files - should `dotnet new` creation map 1:1 with a repository? 
+- [ ] LICENSE and CONTRIBUTING files - should `dotnet new` creation map 1:1 with a repository? 
 
 ## The template creation project
 
