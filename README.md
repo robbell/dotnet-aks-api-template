@@ -51,7 +51,7 @@ Other options include:
     - [x] Deployment and service creation
     - [ ] Image references
     - [ ] Labels
-- [x] AppInsights configuration
+- [x] AppInsights configuration - thanks to [Dirk Rheeder](https://github.com/dirkrheeder)
 - [x] Reintroduce launchsettings.json as per https://github.com/dotnet/aspnetcore/tree/master/src/ProjectTemplates
 - [x] README in created project, including file overview
 
