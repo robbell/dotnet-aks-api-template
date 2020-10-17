@@ -12,7 +12,6 @@ namespace AksApi
     {
         public static void Main(string[] args)
         {
-
 #if (enableLogging)
             var config = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json", optional: false)
@@ -33,12 +32,12 @@ namespace AksApi
                 {
                     webBuilder.UseStartup<Startup>();
                     webBuilder.ConfigureLogging(
-            builder =>
-            {
-                builder.AddApplicationInsights(instrumentationKey);
-                builder.AddFilter<ApplicationInsightsLoggerProvider>("", LogLevel.Information);
-                builder.AddConsole();
-            });
+                        builder =>
+                        {
+                            builder.AddApplicationInsights(instrumentationKey);
+                            builder.AddFilter<ApplicationInsightsLoggerProvider>("", LogLevel.Information);
+                            builder.AddConsole();
+                        });
                 });
 #else
         public static IHostBuilder CreateHostBuilder(string[] args) =>

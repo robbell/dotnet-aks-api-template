@@ -52,7 +52,7 @@
             "value": "(!disable-health-check)",
             "replaces": "enableHealthCheckValue"
         },
-        "disable-logging":{
+        "disable-logging": {
             "type": "parameter",
             "datatype": "bool",
             "description": "Disable Logging and AppInsights support.",
@@ -62,7 +62,13 @@
             "type": "computed",
             "value": "(!disable-logging)",
             "replaces": "enableLoggingValue"
-        }   
+        },
+        "instrumentation-key": {
+            "type": "parameter",
+            "datatype": "text",
+            "replaces": "11111111-1111-1111-11111111111111111",
+            "description": "The AppInsights application key if logging is enabled."
+        }
     },
     "postActions": [
         {
@@ -91,7 +97,7 @@
                     "exclude": [
                         "appsettings.json"
                     ]
-                }                
+                }
             ]
         }
     ]

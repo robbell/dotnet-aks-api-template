@@ -28,8 +28,15 @@ Other options include:
 --disable-health-check  Disable liveness and readiness support
                         Default: false
 
+--disable-logging       Disable Logging and AppInsights support
+                        Default: false
+
+--instrumentation-key   The AppInsights application key if logging is enabled
+                        Default: 11111111-1111-1111-11111111111111111
+
 --skip-restore          Skips the restore of the project on create
                         Default: false
+
 ```
 
 ## Template features
@@ -44,9 +51,9 @@ Other options include:
     - [x] Deployment and service creation
     - [ ] Image references
     - [ ] Labels
+- [x] AppInsights configuration
 
 ### In progress
-- [ ] AppInsights configuration
 - [ ] YAML release pipeline (Azure DevOps or GitHub Actions?)
 - [ ] Clean-up rules
 - [ ] Linting

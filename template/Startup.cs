@@ -32,8 +32,8 @@ namespace AksApi
         {
 #if (enableLogging)
             services.AddApplicationInsightsTelemetry();
-#endif
 
+#endif
             services.AddControllers();
 #if (enableOpenApi)
 
