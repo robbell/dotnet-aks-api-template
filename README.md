@@ -59,6 +59,7 @@ Other options include:
 - [ ] YAML release pipeline (Azure DevOps or GitHub Actions?)
 - [ ] Clean-up rules
 - [ ] Linting
+- [ ] Build badges, NuGet package version
 
 ### To be confirmed
 
@@ -70,7 +71,7 @@ Other options include:
 
 ## The template creation project
 
-- [ ] Local building
+- [x] Local build and install
 - [ ] Tests
 - [x] Installation and usage notes
 - [x] Template packaging on all platforms ([.csproj package](https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates#packing-a-template-into-a-nuget-package-nupkg-file))
