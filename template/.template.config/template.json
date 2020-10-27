@@ -16,6 +16,11 @@
     },
     "defaultName": "AksApi",
     "sourceName": "AksApi",
+    "primaryOutputs": [
+        {
+            "path": "AksApi.csproj"
+        }
+    ],
     "preferNameDirectory": true,
     "symbols": {
         "controller-name": {
