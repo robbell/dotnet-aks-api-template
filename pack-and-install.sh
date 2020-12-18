@@ -1,4 +1,11 @@
 #/usr/bin/bash
+
 set -e
-pkg=$(dotnet pack -v d --force | grep '.nupkg' | sed 's/^.*\Output files: \(.*nupkg\).*$/\1/')
-dotnet new -i $pkg
+
+echo "Packing..."
+pkg=$(dotnet pack -v d --force | grep 'file.*nupkg' | sed -E 's_^.*(Output file \"|Output files: )(.*nupkg).*$_\2_')
+
+echo "Installing..."
+dotnet new -i $pkg | grep 'Template\|---\|aksapi'
+
+echo "Complete ✔️"
