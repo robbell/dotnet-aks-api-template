@@ -77,3 +77,17 @@ Other options include:
 - [x] Template packaging on all platforms ([.csproj package](https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates#packing-a-template-into-a-nuget-package-nupkg-file))
 - [x] Template package versioning
 - [x] Removal of package warnings
+
+## Local development
+
+After making changes to the template, run the script below to pack and install locally:
+
+```
+./pack-and-install.sh
+``` 
+
+Once complete, you can create new projects from the template using:
+
+```
+dotnet new aksapi
+```
