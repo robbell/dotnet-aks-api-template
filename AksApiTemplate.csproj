@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.2.0</PackageVersion>
+    <PackageVersion>1.2.1</PackageVersion>
     <PackageId>RobBell.AksApi.Template</PackageId>
     <Title>ASP.NET Core WebAPI for AKS Template</Title>
     <Authors>Rob Bell</Authors>
