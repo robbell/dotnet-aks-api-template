@@ -8,6 +8,8 @@ A `dotnet new` template for creating a fully-featured, 12 Factor, ASP.NET Core W
 dotnet new -i RobBell.AksApi.Template
 ```
 
+The template resolves from the official NuGet repository.
+
 ## Usage
 
 To create a new project named *MyApi*:
@@ -90,4 +92,22 @@ Once complete, you can create new projects from the template using:
 
 ```
 dotnet new aksapi
+```
+
+
+## Troubleshooting
+
+### Use official nuget repository explicitly
+Try:
+```
+dotnet new -i RobBell.AksApi.Template --nuget-source https://api.nuget.org/v3/index.json
+```
+
+Sometimes you might have private NuGet repositories in your package sources which interfere with installation of the template from the official repo. For example:
+```
+C:\Program Files\dotnet\sdk\3.1.403\NuGet.targets(128,5):
+error : Unable to load the service index for source https://myprivatenugetrepo.com/nuget/v3/index.json.
+
+C:\Program Files\dotnet\sdk\3.1.403\NuGet.targets(128,5):
+error :   Response status code does not indicate success: 401 (Unauthorized).
 ```
